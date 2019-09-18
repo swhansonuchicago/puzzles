@@ -1,11 +1,14 @@
 def steps(number):
-    number = float(input("Enter a number here:"))
+    number = float(number)
+    #print(number)
     if number<=0:
-        print("Invalid input")
-    if number==1:
-        print("1")
-    while (number % 2)==0:   
+        return("Invalid input")
+    while (number % 2)==0:  
+        #print(number)
         number=number/2
+    if number==1:
         print(number)
+        return(number)
     number=(number*3+1)/2
-    return number
+    steps(number)
+    
